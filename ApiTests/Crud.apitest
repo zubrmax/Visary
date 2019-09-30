@@ -1,0 +1,171 @@
+{
+  "$version": "test-case/v1",
+  "className": "Visary.Smoke.Crud",
+  "steps": [
+    {
+      "key": "31AVvrNhTdVC7hVev0eRMG",
+      "ignored": true,
+      "name": "Get by id",
+      "action": {
+        "key": "5GGY7dLYxUSHEPD6FhmC6C",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/crud/{{mnemonic}}/{{id}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "5nn59CCy5Ej8SZ7taUPmM4",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        },
+        {
+          "key": "4pgYy5R2mYlANJv8KUC7Ut",
+          "type": "verify",
+          "ignored": true,
+          "properties": {
+            "SourceVariable": "Body",
+            "SourcePathType": "none",
+            "OperationType": "is-not-null",
+            "Expectation": null,
+            "SourcePath": null
+          }
+        },
+        {
+          "key": "7hz3TZ0XRJ3rlCRSyCQ0mm",
+          "type": "verify",
+          "ignored": true,
+          "properties": {
+            "SourceVariable": "Body",
+            "SourcePathType": "none",
+            "OperationType": "contains-text",
+            "Expectation": "CategoryID"
+          }
+        },
+        {
+          "key": "phLSYwlPsLqtr6gAXVhEE",
+          "type": "verify",
+          "ignored": true,
+          "properties": {
+            "SourceVariable": "Body",
+            "SourcePathType": "jsonpath",
+            "OperationType": "is-equal",
+            "Expectation": "{{id}}",
+            "SourcePath": "$.ID"
+          }
+        }
+      ]
+    },
+    {
+      "key": "1jrPOuPAs7saj7SJpjXgtX",
+      "ignored": true,
+      "name": "Delete by id",
+      "action": {
+        "key": "SpIrE1AM1QnIYfvifCuPw",
+        "type": "http-request",
+        "properties": {
+          "Method": "DELETE",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/crud/{{mnemonic}}/{{id}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "5QMkYD2JMWKelG5Jvk7jlN",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "59T1ZLL52NatFrnxWfj0XN",
+      "ignored": true,
+      "name": "Patch by id",
+      "action": {
+        "key": "7bM4ItKWL4lVgu54pRNmIZ",
+        "type": "http-request",
+        "properties": {
+          "Method": "POST",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/crud/{{mnemonic}}/{{id}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": []
+    },
+    {
+      "key": "5mZQQQQL3jT1qyNr4D7iPD",
+      "ignored": true,
+      "name": "Restore by id",
+      "action": {
+        "key": "2RoXEeUCSKQVlZajBbv0hK",
+        "type": "http-request",
+        "properties": {
+          "Method": "PATCH",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/crud/{{mnemonic}}/restore/{{id}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": []
+    },
+    {
+      "key": "47aWbGqD1YU6ooR8yB55OW",
+      "ignored": true,
+      "name": "Create",
+      "action": {
+        "key": "77t6dWEF2HcieXBHeips9n",
+        "type": "http-request",
+        "properties": {
+          "Method": "POST",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/crud/{{mnemonic}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": []
+    },
+    {
+      "key": "2Eg4LnEC6JFdzlImm2O1gi",
+      "name": "Get by name fake",
+      "action": {
+        "key": "4vJMPiEIvwtrIWDd78I2GF",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/crud/{{mnemonic}}/{{name}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "WGH98kWJVK9bvoQ0tLNTx",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "id": "597",
+    "mnemonic": "DemoCategorizedObject",
+    "name": "fake"
+  }
+}

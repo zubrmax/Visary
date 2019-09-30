@@ -1,0 +1,31 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "qLJmZoADHSXzRalucSO5x",
+      "name": "Get current",
+      "action": {
+        "key": "2vr2HOEvmHKlZdiLQKLgy2",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/user/current",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "3XC3C49rOd3rn4oMqKMSDE",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {}
+}

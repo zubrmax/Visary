@@ -1,0 +1,210 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "75xeVswsf5bPVS9kI3nWbi",
+      "name": "Get menu",
+      "action": {
+        "key": "6ZzAPV0bc7zWnTqMCmKEFu",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/preset/menu",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "3RucePwhSDqEq0pIqv8y5I",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "725mHw5yNesKGIeVEY0mpj",
+      "name": "Get view",
+      "action": {
+        "key": "s4dX1EUzrfCFEq5o5zYSx",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/preset/view/{{mnemonic}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "7fmwGHCTzDbUWwKGFYUI89",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "2GZk8PGEOMXMxZj4ybkpzo",
+      "name": "Get detailview",
+      "action": {
+        "key": "4WHxSXizMlaW3IphlzyHxN",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/preset/detailview/{{mnemonic}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "6MiAAbujSKAAKgvQZoIaKp",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "45EZDS2WPpVLrxnPSy0oKt",
+      "ignored": true,
+      "name": "Post detailview",
+      "action": {
+        "key": "689dS8reDd72r9qLR81Mud",
+        "type": "http-request",
+        "properties": {
+          "Method": "POST",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/preset/detailview/{{mnemonic}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "2WDAmDxFNeAcEFCrhSrWr",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "2mH6VTDjUde5UtrakuOJ9w",
+      "ignored": true,
+      "name": "Delete detailview",
+      "action": {
+        "key": "3EpEO4eyQyKKTJ82Hf9qls",
+        "type": "http-request",
+        "properties": {
+          "Method": "DELETE",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/preset/detailview/{{mnemonic}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "6pCbQdljLfG5OjreY7264p",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "4nzQDEuYxHNiagIwAY5Sza",
+      "name": "Get app",
+      "action": {
+        "key": "6XLNgu3W5JgmDrDzvO05uj",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/preset/app",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "3Cl8dDNM4xt14lSDbOKBzG",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "3DlWaCpgUXfkIudYY0GJZR",
+      "ignored": true,
+      "name": "Post app",
+      "action": {
+        "key": "5w6xgJRRT8FQzWjsMXOIBM",
+        "type": "http-request",
+        "properties": {
+          "Method": "POST",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/preset/app",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "6T7NwW9AoACyaCbKUobZVm",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "4o9nakmzADyzKfsIOp2L6B",
+      "ignored": true,
+      "name": "Delete app",
+      "action": {
+        "key": "jF0BAbpeEymSJFbTCzPJd",
+        "type": "http-request",
+        "properties": {
+          "Method": "DELETE",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/preset/app",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "XjNPS5lMjqziuvEHnXDwL",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {}
+}

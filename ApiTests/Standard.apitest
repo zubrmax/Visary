@@ -1,0 +1,31 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "1cfPT5QZ56GrD2w3mewUe",
+      "name": "Create_default",
+      "action": {
+        "key": "5W0X424Aqi291mn9VmqUuo",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/standard/{{mnemonic}}/create_default",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "6kDsd8ZVPoad6bpFFgNbMe",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {}
+}

@@ -1,0 +1,124 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "7loTDtsizKXBcWPxCO8Mon",
+      "name": "Login/Get Token",
+      "action": {
+        "key": "3MlifXaEbjjBNSDz2YO8Te",
+        "type": "http-request",
+        "properties": {
+          "Method": "POST",
+          "Body": "{\"Content\":\"{\\r\\n  \\\"Login\\\": \\\"Bob\\\",\\r\\n  \\\"Password\\\": \\\"password\\\"\\r\\n}\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/auth",
+          "Headers": "[{\"Content-Type\":\"application/json-patch+json\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "5dLaJ30YUuJUZXnMW7TILZ",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "qyHczc646uYUI3ZklgbBe",
+      "name": "Set AccessToken",
+      "action": {
+        "key": "3rMGKlbfKdGcnynWsrDs3z",
+        "type": "set-variable",
+        "properties": {
+          "TargetLevel": 2,
+          "TransformationType": "none",
+          "SourceVariable": "Body",
+          "SourcePathType": "jsonpath",
+          "SourcePath": "$.AccessToken",
+          "VariableName": "AccessToken"
+        }
+      },
+      "verifications": []
+    },
+    {
+      "key": "6vdU74HakAoqcgzXQ81Y7j",
+      "name": "Set RefreshToken",
+      "action": {
+        "key": "DvSohh6CSPLb4Mce9mWer",
+        "type": "set-variable",
+        "properties": {
+          "TargetLevel": 2,
+          "TransformationType": "none",
+          "SourceVariable": "Body",
+          "SourcePathType": "jsonpath",
+          "SourcePath": "$.RefreshToken",
+          "VariableName": "RefreshToken"
+        }
+      },
+      "verifications": []
+    },
+    {
+      "key": "4BW1gAW58YUa1tcUBh8OuU",
+      "name": "Refresh Token",
+      "action": {
+        "key": "5D6qaZMbzHTn0Ppc6vT5kO",
+        "type": "http-request",
+        "properties": {
+          "Method": "POST",
+          "Body": "{\"Content\":\"{\\r\\n\\t\\\"RefreshToken\\\": \\\"{{RefreshToken}}\\\"\\r\\n}\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/auth",
+          "Headers": "[{\"Content-Type\":\"application/json-patch+json\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "Cnj5RsR9NcoYfp28CLy3Q",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "56ZKKe6lP5rVGBF1bzuoDC",
+      "name": "Set AccessToken",
+      "action": {
+        "key": "30f01uoJ5bDlhqoNMW8Slg",
+        "type": "set-variable",
+        "properties": {
+          "TargetLevel": 3,
+          "TransformationType": "none",
+          "SourceVariable": "Body",
+          "SourcePathType": "jsonpath",
+          "SourcePath": "$.AccessToken",
+          "VariableName": "AccessToken"
+        }
+      },
+      "verifications": []
+    },
+    {
+      "key": "6ha1A5lfpzFSwJgJhj67yk",
+      "name": "Set RefreshToken",
+      "action": {
+        "key": "4i1iUaig7epLgs9WebQA7A",
+        "type": "set-variable",
+        "properties": {
+          "TargetLevel": 2,
+          "TransformationType": "none",
+          "SourceVariable": "Body",
+          "SourcePathType": "jsonpath",
+          "SourcePath": "$.RefreshToken",
+          "VariableName": "RefreshToken"
+        }
+      },
+      "verifications": []
+    }
+  ],
+  "variables": {}
+}

@@ -1,0 +1,86 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "3bWW7rVk6v0ogEJtnAWve5",
+      "name": "Get",
+      "action": {
+        "key": "2R3ddVDqgrsXRlQzPxSMEL",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/listViewPreset/{{presetType}}/{{mnemonic}}/{{id}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "4v6QpUs1wWxTQE1cH1aVj3",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "3tucElxRQuBq798ENHj8f8",
+      "ignored": true,
+      "name": "Patch",
+      "action": {
+        "key": "LmVxF2NXpPvXl9K9JNAUe",
+        "type": "http-request",
+        "properties": {
+          "Method": "PATCH",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/listViewPreset/{{presetType}}/{{mnemonic}}/{{id}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "4hZw2zoUlrwWSRx8zpaFoE",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "1l0JDx6DUbJLdyZUDW5rS0",
+      "ignored": true,
+      "name": "Clearcache",
+      "action": {
+        "key": "2o5yElZIzhGpW8ZJ2AV1wV",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/listViewPreset/{{presetType}}/clearcache",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "1NeRxLz6BH0mdJ4D8Pdbwz",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "presetType": "gridpreset",
+    "id": "0"
+  }
+}

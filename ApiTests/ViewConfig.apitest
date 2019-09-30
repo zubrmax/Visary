@@ -1,0 +1,187 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "60ZqPX8eOpImYf2gnkq4zB",
+      "name": "Get listview",
+      "action": {
+        "key": "4Oo0O98kgJ54TJkKv6OZ1Q",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/viewconfig/{{mnemonic}}/listview",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "1kYbr16MCEgL6EdbkCvsrs",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "6zi6cEeRscc6VP2dF57d9L",
+      "name": "Get editors",
+      "action": {
+        "key": "67HloGzPKXNAXDsbZSF75d",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/viewconfig/{{mnemonic}}/editors",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "1vzHdAY7wRlQDIStk4PRdh",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "1iVWaBdILYypootlyi9GUr",
+      "name": "Get detailview",
+      "action": {
+        "key": "3eCShph1qQZrcot9ofTIzo",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/viewconfig/{{mnemonic}}/detailview/{{id}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "5gHPzQeQjGkbq98tMy6xU4",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "79nbyrppKHXRul3C9r8jl3",
+      "name": "Get detailview row_version",
+      "action": {
+        "key": "6TTZqdR3OnNeayXOLZdcXh",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/viewconfig/{{mnemonic}}/detailview/{{id}}/{{row_version}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "2BbCC5enqDQqQfOfK7llqs",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "bOpkGakxOyfBtIpZUh8Ia",
+      "name": "Get columns",
+      "action": {
+        "key": "2YbdtnXWyfsMBEQoDeQ7oD",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/viewconfig/{{mnemonic}}/columns",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "1uWoUhCnX88q01YQvXRxWT",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "4SdaouCNFSWmbhgKLqTNk1",
+      "name": "Get editor by property",
+      "action": {
+        "key": "1lkrEOlh7CVmgofUyyW3sk",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/viewconfig/{{mnemonic}}/editor/{{propertyName}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "2TrTpknUVo80ICsFV7IzRX",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "wCLoaHTAAOUA4QfREKqjD",
+      "name": "Get column by property",
+      "action": {
+        "key": "203v9rIGGedsEDO3Cgi4lj",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/viewconfig/{{mnemonic}}/column/{{propertyName}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "2370zhDJ1Po0b2gX7tBepA",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "variable": null,
+    "mnemonic": "DemoObjectType",
+    "id": "4",
+    "row_version": "1",
+    "propertyName": "Title"
+  }
+}

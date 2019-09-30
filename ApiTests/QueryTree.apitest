@@ -1,0 +1,31 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "1XEcyMoLA3bW1vpr86ez4q",
+      "name": "Get",
+      "action": {
+        "key": "5frfxxzNaW2LXQY8SOatc6",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/querytree/{{mnemonic}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "7Lv8o1wc72JaYlBzBetYtI",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {}
+}

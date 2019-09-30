@@ -1,0 +1,33 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "1rRnmwbJddZV07OQ3PNeq8",
+      "name": "Get",
+      "action": {
+        "key": "56Dpod5btkYU1iFNiOpupc",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/excel/{{mnemonic}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "1h7kUjrYYvkGBdUPCNmTNf",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "mnemonic": "DemoObject"
+  }
+}

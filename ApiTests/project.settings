@@ -1,0 +1,9 @@
+{
+  "$version": "project-settings/v1",
+  "projectLanguage": "cs",
+  "projectReferences": [],
+  "variables": {
+    "base-url": "http://webapi.test.k8s.npc.ba/api",
+    "mnemonic": "DemoCategorizedObject"
+  }
+}

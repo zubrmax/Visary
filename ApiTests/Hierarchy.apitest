@@ -1,0 +1,60 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "mwcjygdmZHhh34VtDoMtH",
+      "name": "Get",
+      "action": {
+        "key": "5cTYMjm3p2F8IC3UAR1vHu",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/hierarchy/{{mnemonic}}/parents/{{id}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "1dSSOeBLvYFXpAoAC2I4WS",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "6ELodsqOpXZFTnoZeXlccI",
+      "ignored": true,
+      "name": "Post",
+      "action": {
+        "key": "7xqjFSZrJpaD0zVG1voV9s",
+        "type": "http-request",
+        "properties": {
+          "Method": "POST",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/hierarchy/{{mnemonic}}/ChangePosition/{{id}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "2mVbkWBNpWneH0iBOV8uYD",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "id": "2",
+    "mnemonic": "DemoTreeObject"
+  }
+}

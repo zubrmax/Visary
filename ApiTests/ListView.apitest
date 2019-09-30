@@ -1,0 +1,56 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "6OtlxahPFoeZVD8weo9oSA",
+      "name": "Get",
+      "action": {
+        "key": "61Z8aI3oGW6Jl6d7xL17WD",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":null,\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/listview/{{mnemonic}}"
+        }
+      },
+      "verifications": [
+        {
+          "key": "7HajD8SQmMirbaAi95ahRQ",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": "200",
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "5zDAsmX38YgOml5yVDugSW",
+      "name": "Get filtered",
+      "action": {
+        "key": "3JHQssy8ALInj4hnJwNpWz",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":null,\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/listview/{{mnemonic}}/filter/baseObject"
+        }
+      },
+      "verifications": [
+        {
+          "key": "1wBoW50NZacV3Ta8lkQ3ln",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": "200",
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "mnemonic": "DemoObject"
+  }
+}

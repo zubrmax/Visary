@@ -1,0 +1,21 @@
+{
+  "$version": "test-order/v1",
+  "items": [
+    "AppConfig.apitest",
+    "Auth.apitest",
+    "CategorizedListView.apitest",
+    "Crud.apitest",
+    "Enum.apitest",
+    "Excel.apitest",
+    "Hierarchy.apitest",
+    "ListView.apitest",
+    "ListViewPreset.apitest",
+    "Preset.apitest",
+    "QueryTree.apitest",
+    "Standard.apitest",
+    "TreeView.apitest",
+    "UiDesigner.apitest",
+    "User.apitest",
+    "ViewConfig.apitest"
+  ]
+}

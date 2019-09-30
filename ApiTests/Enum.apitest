@@ -1,0 +1,33 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "4biz28hqLiYspxjmPeslM9",
+      "name": "Get by type",
+      "action": {
+        "key": "5IC6vSlowAgu54Uqbn9WJp",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/enum/{{type}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "4NNsFjqHZBg4tgE1irT6zZ",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "type": "Visary.Security.Abstractions.Enums.SystemRole"
+  }
+}

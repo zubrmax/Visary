@@ -1,0 +1,33 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "64bpVR4HxkiLKp6FxizU0b",
+      "name": "Get CategorizedListView",
+      "action": {
+        "key": "1uAI7qnDjuvRWUP8xsjArw",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/listview/{{mnemonic}}/categorized?skip=0&categoryId=2&presetId=0&all=false&hidden=false",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "1IvdVhuecNC1iVkT0rFpj",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "mnemonic": "DemoCategorizedObject"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "6pGmoRV5hfxOjMctqaXnad",
+      "name": "Get AppConfig",
+      "action": {
+        "key": "6Thd5RBa3i77q8xsxzHQSW",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":null,\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/appconfig"
+        }
+      },
+      "verifications": [
+        {
+          "key": "2URwe3aeDmUCNEXVXnnzcS",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {}
+}

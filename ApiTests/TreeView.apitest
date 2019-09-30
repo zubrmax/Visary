@@ -1,0 +1,33 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "8SwMxPHm8PbiTU6YVh7hU",
+      "name": "Get",
+      "action": {
+        "key": "7acDYFqIpN2uA4NB3KlmyC",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/treeview/{{mnemonic}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "6m1MSaAIRGiadfE3rO0VMV",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "mnemonic": "DemoTreeObject"
+  }
+}

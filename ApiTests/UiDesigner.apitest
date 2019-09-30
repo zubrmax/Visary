@@ -1,0 +1,59 @@
+{
+  "$version": "test-case/v1",
+  "steps": [
+    {
+      "key": "2oAf56MIWLg3rWMeDSytJY",
+      "name": "Get config",
+      "action": {
+        "key": "uNZhbLQgSVhsw3rpyVW3R",
+        "type": "http-request",
+        "properties": {
+          "Method": "GET",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/uidesigner/config/{{key}}",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "6MYmcopXqwrL2XGeNQjArG",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    },
+    {
+      "key": "2IBYfhhPO60dQ3QYYpq8I1",
+      "ignored": true,
+      "name": "Save",
+      "action": {
+        "key": "29G53btSTB4bRmwbzE7fAp",
+        "type": "http-request",
+        "properties": {
+          "Method": "POST",
+          "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
+          "Url": "{{base-url}}/uidesigner/save",
+          "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
+        }
+      },
+      "verifications": [
+        {
+          "key": "6r62G3QWxltUbOWeGEyuGk",
+          "type": "verify",
+          "properties": {
+            "SourceVariable": "StatusCode",
+            "Expectation": 200,
+            "OperationType": "is-equal-number"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "key": "DetailViewPresetConfig"
+  }
+}
