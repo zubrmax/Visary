@@ -203,11 +203,11 @@
     "SourceControlRepository": {
       "__type": "Telerik.TestStudio.SourceControl.Git.TS.GitRepositoryInfo",
       "__value": {
-        "RemotePath": "https://gitlab.com/zubrmax/visary.git",
+        "RemotePath": "https://github.com/zubrmax/Visary.git",
         "ServerInfo": {
           "__type": "Telerik.TestStudio.SourceControl.Git.TS.GitServerInfo",
           "__value": {
-            "ServerName": "https://gitlab.com/zubrmax/visary.git"
+            "ServerName": "https://github.com/zubrmax/Visary.git"
           }
         },
         "ServerType": 2
