@@ -26,7 +26,7 @@
         "__value": {
           "CollectProfilerSampleData": true,
           "Description": null,
-          "Name": "maxfax",
+          "Name": "visary",
           "ProfilerPluginSettings": {
             "a43b256e-1b44-415f-ade4-6e3ea44eb755": {
               "__type": "ArtOfTest.WebAii.Design.Execution.Profiler.PerformanceCounterProfiler.PerformanceCounterConfigurationSettings",
@@ -34,7 +34,7 @@
             }
           },
           "ServerId": "e5b9cea5-320b-4338-a559-ba4af63889b7",
-          "ServerPath": null,
+          "ServerPath": "172.17.101.1",
           "ServerPort": 55555,
           "ServerType": 0
         }

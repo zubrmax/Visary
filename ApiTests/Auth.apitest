@@ -109,7 +109,7 @@
         "key": "4i1iUaig7epLgs9WebQA7A",
         "type": "set-variable",
         "properties": {
-          "TargetLevel": 2,
+          "TargetLevel": 3,
           "TransformationType": "none",
           "SourceVariable": "Body",
           "SourcePathType": "jsonpath",

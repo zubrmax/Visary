@@ -10,7 +10,7 @@
         "properties": {
           "Method": "GET",
           "Body": "{\"Content\":\"\",\"FilePath\":null,\"Mode\":\"raw\"}",
-          "Url": "{{base-url}}/listview/{{mnemonic}}/categorized?skip=0&categoryId=2&presetId=0&all=false&hidden=false",
+          "Url": "{{base-url}}/listview/{{mnemonic}}/categorized?categoryId=0&presetId=0&all=false&hidden=false",
           "Headers": "[{\"Authorization\":\"Bearer {{AccessToken}}\"}]"
         }
       },

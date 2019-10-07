@@ -1,10 +1,8 @@
 {
   "$version": "test-case/v1",
-  "className": "Visary.Smoke.Crud",
   "steps": [
     {
       "key": "31AVvrNhTdVC7hVev0eRMG",
-      "ignored": true,
       "name": "Get by id",
       "action": {
         "key": "5GGY7dLYxUSHEPD6FhmC6C",
