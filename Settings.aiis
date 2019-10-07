@@ -200,20 +200,8 @@
     "DefaultWPFApplication": null,
     "UseLegacySilverlightFindLogic": false,
     "ProjectGuid": "5ea746d7-7aa4-4a76-824d-8cba017de192",
-    "SourceControlRepository": {
-      "__type": "Telerik.TestStudio.SourceControl.Git.TS.GitRepositoryInfo",
-      "__value": {
-        "RemotePath": "https://github.com/zubrmax/Visary.git",
-        "ServerInfo": {
-          "__type": "Telerik.TestStudio.SourceControl.Git.TS.GitServerInfo",
-          "__value": {
-            "ServerName": "https://github.com/zubrmax/Visary.git"
-          }
-        },
-        "ServerType": 2
-      }
-    },
-    "IsOnline": true,
+    "SourceControlRepository": null,
+    "IsOnline": false,
     "ProjectLanguage": 2,
     "ProjectReferences": [
       "System",
